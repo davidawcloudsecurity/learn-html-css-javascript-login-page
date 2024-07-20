@@ -1,33 +1,33 @@
-// script.js
-
 document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting the traditional way
+    event.preventDefault();
 
-    // Get the values from the form
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    // Send a POST request to the backend
-    fetch('http://localhost:3000/login', { // Update this URL if your server runs on a different port or domain
+    console.log('Submitting login with:', { username, password });
+
+    fetch('https://5500-davidawclou-learnhtmlcs-u0d5vrpjmnb.ws-us115.gitpod.io:3000/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({ username, password })
     })
-    .then(response => response.json())
+    .then(response => {
+        console.log('Response Status:', response.status);
+        return response.json();
+    })
     .then(data => {
+        console.log('Response Data:', data);
         const errorMessageElement = document.getElementById('error-message');
         if (data.success) {
-            alert(data.message); // Show success message
-            // Redirect or handle successful login here
+            alert(data.message);
         } else {
-            errorMessageElement.innerText = data.message; // Show error message
+            errorMessageElement.innerText = data.message;
             errorMessageElement.classList.remove('hidden');
         }
     })
     .catch(error => {
-        console.error('Error:', error);
-        // Handle error scenario
+        console.error('Fetch Error:', error);
     });
 });
