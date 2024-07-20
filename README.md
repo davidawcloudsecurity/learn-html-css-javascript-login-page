@@ -4,7 +4,15 @@
 ```bash
 docker pull mysql:latest
 docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=yourpassword -e MYSQL_DATABASE=mydatabase -p 3306:3306 -d mysql:latest
-``` 
+```
+```bash
+docker stop mysql-container
+docker start mysql-container
+
+Persistent Volume
+
+docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=yourpassword -e MYSQL_DATABASE=mydatabase -p 3306:3306 -v mysql-data:/var/lib/mysql -d mysql:latest
+```
 1.2 Create a table for users in MySQL:
 ```bash
 docker exec -it mysql-container mysql -u root -p
