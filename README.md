@@ -1,6 +1,5 @@
 # learn-html-css-javascript
-how to create login page
-
+## how to create a login page
 1. Set Up MySQL Database using Docker
 ```bash
 docker pull mysql:latest
