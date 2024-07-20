@@ -8,7 +8,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const password = document.getElementById('password').value;
 
     // Send a POST request to the backend
-    fetch('http://localhost:3306/login', { // Update this URL if your server runs on a different port or domain
+    fetch('http://localhost:3000/login', { // Update this URL if your server runs on a different port or domain
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
