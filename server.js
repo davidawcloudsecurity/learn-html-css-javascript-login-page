@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs'); // Ensure passwords are hashed
 
 const app = express();
+app.use(cors()); // Enable CORS for all routes
 const port = 3000;
 
 const db = mysql.createConnection({
