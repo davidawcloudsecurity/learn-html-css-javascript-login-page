@@ -11,12 +11,21 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    // Basic validation against predefined credentials
-    if (username === validUsername && password === validPassword) {
-        document.getElementById('error-message').classList.add('hidden');
-        alert('Login successful!');
+    // Clear previous error messages
+    const errorMessageElement = document.getElementById('error-message');
+    errorMessageElement.classList.add('hidden');
+    
+    // Validate credentials
+    if (username !== validUsername && password !== validPassword) {
+        errorMessageElement.innerText = 'Both username and password are incorrect.';
+        errorMessageElement.classList.remove('hidden');
+    } else if (username !== validUsername) {
+        errorMessageElement.innerText = 'Username is incorrect.';
+        errorMessageElement.classList.remove('hidden');
+    } else if (password !== validPassword) {
+        errorMessageElement.innerText = 'Password is incorrect.';
+        errorMessageElement.classList.remove('hidden');
     } else {
-        document.getElementById('error-message').innerText = 'Invalid username or password.';
-        document.getElementById('error-message').classList.remove('hidden');
+        alert('Login successful!');
     }
 });
