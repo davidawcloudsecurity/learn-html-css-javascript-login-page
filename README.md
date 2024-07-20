@@ -31,4 +31,6 @@ INSERT INTO users (username, password) VALUES ('user2', '123');
 Install Node.js and Express:
 ```bash
 npm install express mysql2 body-parser
+npm install bcryptjs
+node server.js
 ```
