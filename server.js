@@ -3,7 +3,7 @@
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
-const bcrypt = require('bcrypt'); // Ensure passwords are hashed
+const bcrypt = require('bcryptjs'); // Ensure passwords are hashed
 
 const app = express();
 const port = 3000;
@@ -11,8 +11,8 @@ const port = 3000;
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',
-    database: 'your_database'
+    password: 'yourpassword',
+    database: 'mydatabase'
 });
 
 db.connect(err => {
