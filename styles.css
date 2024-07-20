@@ -28,10 +28,11 @@ form label {
 
 form input {
     width: 100%;
-    padding: 10px;
+    padding: 10px; /* Adjust padding as needed */
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    box-sizing: border-box; /* Includes padding and border in the width */
 }
 
 button {
