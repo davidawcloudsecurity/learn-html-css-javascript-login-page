@@ -4,6 +4,7 @@ const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs'); // Ensure passwords are hashed
+const cors = require('cors');
 
 const app = express();
 app.use(cors()); // Enable CORS for all routes
@@ -12,7 +13,7 @@ const port = 3000;
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'yourpassword',
+    password: 'password123',
     database: 'mydatabase'
 });
 
