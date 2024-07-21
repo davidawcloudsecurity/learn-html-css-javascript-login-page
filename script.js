@@ -6,7 +6,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     console.log('Submitting login with:', { username, password });
 
-    fetch('https://5500-davidawclou-learnhtmlcs-u0d5vrpjmnb.ws-us115.gitpod.io:3000/login', {
+    fetch('https://3000-davidawclou-learnhtmlcs-h0tss19dy46.ws-us115.gitpod.io/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
