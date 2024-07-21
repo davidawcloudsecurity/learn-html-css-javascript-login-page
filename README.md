@@ -35,3 +35,5 @@ npm install bcryptjs; \
 npm install cors; \
 node server.js
 ```
+
+https://www.stackhawk.com/blog/fixing-no-access-control-allow-origin-header-present/#there-are-two-approaches-to-getting-it-right
