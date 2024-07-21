@@ -11,7 +11,7 @@ app.use(cors()); // Enable CORS for all routes
 const port = 3000;
 
 const db = mysql.createConnection({
-    host: 'localhost',
+    host: 'mysql',
     user: 'root',
     password: 'password123',
     database: 'mydatabase'
