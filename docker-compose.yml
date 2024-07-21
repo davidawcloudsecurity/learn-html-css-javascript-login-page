@@ -12,9 +12,6 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
 
-volumes:
-  mysql-data:
-  
   node-app:
     build:
       context: ./node-app
@@ -37,3 +34,6 @@ volumes:
       - "80:80"
     depends_on:
       - node-app
+
+volumes:
+  mysql-data:
