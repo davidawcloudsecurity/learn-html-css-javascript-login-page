@@ -32,5 +32,6 @@ Install Node.js and Express:
 ```bash
 npm install express mysql2 body-parser
 npm install bcryptjs
+npm install cors
 node server.js
 ```
