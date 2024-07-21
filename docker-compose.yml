@@ -1,5 +1,20 @@
 version: '3'
 services:
+  mysql:
+    build:
+      context: ./mysql
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_ROOT_PASSWORD: password123
+      MYSQL_DATABASE: mydatabase
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
+  
   node-app:
     build:
       context: ./node-app
@@ -22,18 +37,3 @@ services:
       - "80:80"
     depends_on:
       - node-app
-
-  mysql:
-    build:
-      context: ./mysql
-      dockerfile: Dockerfile
-    environment:
-      MYSQL_ROOT_PASSWORD: password123
-      MYSQL_DATABASE: mydatabase
-    ports:
-      - "3306:3306"
-    volumes:
-      - mysql-data:/var/lib/mysql
-
-volumes:
-  mysql-data:
