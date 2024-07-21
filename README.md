@@ -38,5 +38,9 @@ npm install bcryptjs; \
 npm install cors; \
 node server.js
 ```
-
+3.1 Setup Nginx to avoid cors
+```bash
+docker build -t nginx-image .; \
+docker run -d --name nginx01 -p 80:80 nginx-image
+```
 https://www.stackhawk.com/blog/fixing-no-access-control-allow-origin-header-present/#there-are-two-approaches-to-getting-it-right
