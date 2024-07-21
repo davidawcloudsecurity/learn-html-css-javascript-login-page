@@ -30,8 +30,8 @@ INSERT INTO users (username, password) VALUES ('user2', '123');
 2.1 Set Up the Backend Server
 Install Node.js and Express:
 ```bash
-npm install express mysql2 body-parser
-npm install bcryptjs
-npm install cors
+npm install express mysql2 body-parser; \
+npm install bcryptjs; \
+npm install cors; \
 node server.js
 ```
