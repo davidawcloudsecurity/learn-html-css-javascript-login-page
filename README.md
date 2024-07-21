@@ -3,7 +3,7 @@
 1.1 Set Up MySQL Database using Docker
 ```bash
 docker pull mysql:latest; \
-docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=yourpassword -e MYSQL_DATABASE=mydatabase -p 3306:3306 -d mysql:latest
+docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=password123 -e MYSQL_DATABASE=mydatabase -p 3306:3306 -d mysql:latest
 ```
 ```bash
 docker stop mysql-container
