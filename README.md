@@ -17,6 +17,9 @@ docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=yourpassword -e MYSQL_D
 ```bash
 docker exec -it mysql-container mysql -u root -p
 
+SHOW DATABASES;
+use mydatabase;
+
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL UNIQUE,
