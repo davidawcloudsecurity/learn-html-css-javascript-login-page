@@ -28,7 +28,7 @@ CREATE TABLE users (
 ```
 1.3 Insert a test user:
 ```bash
-INSERT INTO users (username, password) VALUES ('user2', '123');
+INSERT INTO users (username, password) VALUES ('user2', '$2a$10$D5VHJksIQ7lo1q9Au3bQmevE8OW5sI3562r0SFVGyEm5nqi9vnlGi');
 ```
 2.1 Set Up the Backend Server
 Install Node.js and Express:
