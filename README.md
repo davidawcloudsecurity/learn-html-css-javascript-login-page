@@ -1,5 +1,5 @@
 # learn-html-css-javascript
-## how to create a login page
+## how to create a login page with nginx, HTML, CSS and javascript
 1.1 Set Up MySQL Database using Docker
 ```bash
 docker pull mysql:latest; \
