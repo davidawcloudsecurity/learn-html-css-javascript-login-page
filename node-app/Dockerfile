@@ -8,7 +8,9 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install express mysql2 body-parser
+RUN npm install bcryptjs
+RUN npm install cors
 
 # Copy the rest of the application files
 COPY . .
