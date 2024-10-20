@@ -38,6 +38,8 @@ npm install bcryptjs; \
 npm install cors; \
 node server.js
 ```
+## Resource
+https://freefrontend.com/css-login-forms/
 3.1 Setup Nginx to avoid cors
 ```bash
 docker build -t nginx-image .; \
